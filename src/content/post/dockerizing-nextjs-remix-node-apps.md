@@ -4,6 +4,10 @@ description: This is an example of how to run a node.js app in a Docker containe
 publishDate: "2023-09-04T00:00:00-04:00"
 ---
 
+**Note that I no longer use Alpine as my base image, but Debian: <https://vicvijayakumar.com/debian-node-docker-image>**
+
+--
+
 There are many reasons why you may want to run your app in a Docker container. This blog post assumes that you have already decided to go down this path, and will not try to educate you on the benefits of containerization.
 
 I used to run my applications on Amazon Elastic Container Service (ECS), and now on AWS Fargate, both of which need Docker images.
