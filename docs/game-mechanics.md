@@ -1,149 +1,79 @@
 # Game Mechanics
 
+## Overview
+
+SETTLERS uses a hex-based territory system with different states and capture mechanics. This document explains the core gameplay elements.
+
 ## Hex States
 
-<table border="0">
-<tr>
-<td width="50%">
+Each hex in the game can be in one of the following states:
 
-### Unsettled
-- Empty hex without owner
-- Available for capture
+### 1. Unsettled
+- Empty hex without an owner
+- Available for immediate capture
 
 ![Unsettled hex](media/unsettled-hex.svg)
 
-### Settled By Other Player
-- Captured by player outside your clan
-- Can be captured after cooldown
-
-![Other player hex](media/other-player-hex.svg)
-
-### Settled By Your Clan
-- Captured by your clan member
-- Contributes to clan territory
-
-![Clan member hex](media/clan-member-hex.svg)
-
-</td>
-<td width="50%">
-
-### Settled By Other Clan
-- Captured by different clan member
-- Can be captured after cooldown
-
-![Other clan hex](media/other-clan-hex.svg)
-
-### Your Hex
+### 2. Your Hex
 - Personally captured by you
 - Part of your territory
 
 ![Your hex](media/mine-hex.svg)
 
-### Cooldown (TBA)
+### 3. Clan Member's Hex
+- Captured by your clan member
+- Contributes to clan territory
+
+![Clan member hex](media/clan-member-hex.svg)
+
+### 4. Other Clan's Hex
+- Captured by different clan member
+- Capturable after cooldown period
+
+![Other clan hex](media/other-clan-hex.svg)
+
+### 5. Other Player's Hex
+- Captured by player outside your clan
+- Capturable after cooldown period
+
+![Other player hex](media/other-player-hex.svg)
+
+### 6. Cooldown
 - Recently captured hex
-- Locked for 1 hour
+- Protected for 1 hour
+- No captures possible during this period
 
 ![Cooldown hex](media/cooldown-hex.svg)
 
-</td>
-</tr>
-</table>
-
-## Settlement Process
-
-1. Move to the hex you want to capture
-2. Press the "Settle" button to capture it
-3. After settlement:
-   - You become the hex owner
-   - If you're in a clan, hex becomes clan territory
-   - Hex gets 1-hour immunity from capture
-   - Previous owner (if any) loses the hex
-
-## Capture Requirements
-
-To capture a hex, you need:
-
-1. Physical presence in the hex
-2. Press the "Settle" button to capture
-
 ## Capture Mechanics
 
-
+### Basic Requirements
+1. Physical presence in the target hex
+2. "Settle" button availability
+3. No active cooldown on the hex
 
 ### Capture Process
+1. Move to the desired hex location
+2. Press the "Settle" button
+3. Wait for confirmation
 
-1. **Initiation**
-   - Player must be physically present in the hex
-   - Player must trigger capture action in the game
+### Results
+- You become the new owner
+- Hex joins your clan's territory (if applicable)
+- 1-hour capture immunity begins
+- Previous owner loses the hex
 
-2. **Successful Capture**
-   - Player becomes the new owner
-   - Cooldown period begins
-   - Previous owner (if any) is notified
-   - Territory statistics update
-
-### Clan Capture Dynamics
-
-- Members of the same clan can capture hexes from each other
-- When a clan member captures a hex from another clan member:
-  - The individual owner changes
-  - The hex remains under the clan's control
-  - The clan's territory stays intact
-- This system encourages active participation within clans
+### Clan Dynamics
+- Clan members can capture hexes from each other
+- Hex remains under clan control when captured by clan member
+- Only individual ownership changes
+- Clan territory remains intact
 
 ## Cooldown System
 
-### Basic Rules
+The cooldown system protects newly captured territories:
 
-- Each hex enters a 1-hour cooldown period after capture
-- During cooldown:
-  - Hex cannot be captured by other players
-  - Timer is visible to all players
-  - Owner is protected from immediate recapture
-
-### Strategic Importance
-
-- Prevents constant territory flipping
-- Encourages strategic timing of captures
-- Allows players to maintain territory control
-- Creates natural breaks in territory wars
-
-## Notifications
-
-Players receive notifications for important events:
-
-- When their hexes are captured
-- When nearby hexes become available
-- When cooldown periods expire
-- For important territory events
-
-## Territory Building Strategy
-
-### Connected Territories
-
-- Building continuous territories is advantageous
-- Connected hexes create stronger defensive positions
-- Supply lines can be established through connected hexes
-- Easier to monitor and defend connected areas
-
-### Defense Tactics
-
-- Monitor cooldown timers of your hexes
-- Maintain regular presence in your territory
-- Coordinate with clan members for defense
-- Use natural barriers and strategic locations
-
-## Fair Play Systems
-
-To ensure fair gameplay, the system includes:
-
-- Location verification checks
-- Movement speed monitoring
-- Anti-spoofing protection
-- Activity pattern analysis
-
-Players should always:
-- Play from their actual physical location
-- Move at realistic speeds between hexes
-- Respect game mechanics and other players
-- Report any suspicious activity
+- **Duration**: 1 hour after capture
+- **Protection**: No captures possible during cooldown
+- **Visibility**: Timer visible to all players
+- **Purpose**: Prevents immediate recapture

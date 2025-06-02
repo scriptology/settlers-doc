@@ -26,19 +26,10 @@ SETTLERS is an exciting location-based Telegram Mini App that transforms the rea
 - After capture, hexes have a cooldown period before others can claim them
 - Build your empire by connecting multiple hexes together
 
-### Players
-
-- Players must physically visit locations to interact with hexes
-- Players can join clans to work together
-- Each player has:
-  - A profile with statistics
-  - A history of captured hexes
-  - The ability to join one clan at a time
 
 ### Clans
 
 - Groups of players working together
-- Can control multiple hexes collectively
 - Have a leadership hierarchy
 - Share territory control benefits
 
@@ -48,7 +39,7 @@ SETTLERS is an exciting location-based Telegram Mini App that transforms the rea
    - Your Telegram account is automatically used to create your game profile
    - By default, we use your Telegram name as your display name
    - You can change your display name anytime in profile settings for privacy
-   - Your game identity can be completely separate from your Telegram profile
+
 
 2. **Understanding the Map**
    
@@ -109,13 +100,3 @@ The game has four main sections accessible from the bottom menu:
    - Player achievements
    - Competition standings
 
-## Tips for New Players
-
-1. Start by capturing hexes in your regular daily locations
-2. Pay attention to hex cooldown times
-3. Join a clan to learn from experienced players
-4. Keep your location services enabled while playing
-5. Check the game regularly to maintain your territory
-
-
-Remember to always play fairly and respect other players in the game world.
