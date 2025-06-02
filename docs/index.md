@@ -27,14 +27,14 @@ SETTLERS is a location-based territory control Telegram Mini App where players c
    - Anti-spoofing protection
    - Location verification
 
-3. [Clan System](./clan-system.md)
+3. [Clans](./clan-system.md)
 
    - Creating or joining clans
    - Clan leadership
    - Territory control as a clan
    - Clan member management
 
-4. [Territory System](./territory-system.md)
+4. [Territory](./territory-system.md)
 
    - Understanding hexes
    - Capture mechanics
