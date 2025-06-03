@@ -39,17 +39,6 @@ This is the most basic version of a Dockerfile that will run a Node.js applicati
 FROM node:18-alpine3.18
 WORKDIR /site
 
-# Install latest security upgrades, and crucial runtimes.
-RUN apk update \
-    && apk upgrade \
-    && apk --no-cache add \
-        tini \
-    && rm -rf /var/cache/apk/* \
-    && npm --global install npm pm2 \
-    && rm -rf /opt/yarn* \
-    && rm -rf /root/.npm \
-    && rm -rf /tmp/*
-
 COPY . /site
 RUN npm install --production
 
