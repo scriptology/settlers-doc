@@ -1,10 +1,10 @@
 import { defineConfig } from "astro/config";
-import fs from "fs";
+
+import { readFileSync } from "fs";
 import mdx from "@astrojs/mdx";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import prefetch from "@astrojs/prefetch";
-import remarkUnwrapImages from "remark-unwrap-images";
 
 // @ts-ignore:next-line
 import { remarkReadingTime } from "./src/utils/remark-reading-time.mjs";
@@ -13,8 +13,12 @@ import { remarkReadingTime } from "./src/utils/remark-reading-time.mjs";
 export default defineConfig({
     site: "https://vicvijayakumar.com/",
     markdown: {
-        remarkPlugins: [remarkUnwrapImages, remarkReadingTime],
-        remarkRehype: { footnoteLabelProperties: { className: [""] } },
+        remarkPlugins: [remarkReadingTime],
+        remarkRehype: { 
+            footnoteLabelProperties: { className: [""] },
+            // This will unwrap images from paragraphs
+            allowDangerousHtml: true
+        },
         shikiConfig: {
             theme: "dracula",
             wrap: true,
@@ -39,10 +43,9 @@ export default defineConfig({
 function rawFonts(ext: Array<string>) {
     return {
         name: "vite-plugin-raw-fonts",
-        // @ts-ignore:next-line
-        transform(_, id) {
+        transform(code: string, id: string) {
             if (ext.some((e) => id.endsWith(e))) {
-                const buffer = fs.readFileSync(id);
+                const buffer = readFileSync(id);
                 return {
                     code: `export default ${JSON.stringify(buffer)}`,
                     map: null,
