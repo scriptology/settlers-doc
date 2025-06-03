@@ -1,4 +1,27 @@
+# Основные настройки
+title: Settlers Documentation
+description: Documentation for Settlers game
+baseurl: "/settlers-doc" # Укажите, если сайт в подкаталоге, например, username.github.io/settlers-doc
+url: "https://scriptology.github.io" # Ваш домен GitHub Pages
+
+# Настройки сборки
 markdown: kramdown
 kramdown:
-  input: GFM
-theme: minima
+  input: GFM # GitHub Flavored Markdown
+  hard_wrap: false
+  syntax_highlighter: rouge # Подсветка кода
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+
+# Тема
+theme: jekyll-theme-primer # Указываем тему, которая используется в логе
+
+# Плагины
+plugins:
+  - jekyll-github-metadata
+  - jekyll-seo-tag
+  - jekyll-feed
+
+# Указываем папку docs как источник
+source: docs
+destination: docs/_site
