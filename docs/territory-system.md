@@ -23,10 +23,14 @@ The game world is divided into three map layers: **Hex Layer**, **Clan Territory
 - Example: 4/7 hexes = 57% = clan control
 - Updates dynamically with captures
 
-### Area Formula
-A_clan = 7 × A_regular = 7 × 0.015 km² = 0.737 km²
 
 ![Territory Structure](media/nested-hexes.png)
+
+
+### Area Formula
+```math
+A_{clan} = 7 × A_{regular} = 7 × 0.015 \text{ km}^2 = 0.737 \text{ km}^2
+```
 
 ## Global Layer
 - World map overview
