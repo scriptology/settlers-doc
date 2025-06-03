@@ -1,102 +1,81 @@
 # Getting Started with SETTLERS
 
-## What is SETTLERS?
+## Quick Start
 
-SETTLERS is an exciting location-based Telegram Mini App that transforms the real world into a strategic playground. The game divides the world into hexagonal territories that players can capture and control. By physically moving around in the real world, you can interact with these hexes, claim them as your own, and build your influence in the game.
+1. **Launch**
+   - Open [SETTLERS](https://t.me/settlers_hex_bot/game)
+   - Grant location access
+   - Start exploring!
 
-## Getting Access
-
-1. **Open in Telegram**
-   - Find SETTLERS in Telegram's Mini Apps menu
-   - Or use the direct link: [https://t.me/settlers_hex_bot/game](https://t.me/settlers_hex_bot/game)
-   - No additional downloads required
-
-2. **Quick Start**
-   - Launch the Mini App in Telegram
-   - Grant location access when prompted
-   - You're ready to play!
-
-## Basic Concepts
-
-### Hexes
-
-- The game world is divided into hexagonal territories (hexes)
-- Each hex represents a real-world location you can visit
-- You can capture hexes by being physically present at their location
-- After capture, hexes have a cooldown period before others can claim them
-- Build your empire by connecting multiple hexes together
-
-
-### Clans
-
-- Groups of players working together
-- Have a leadership hierarchy
-- Share territory control benefits
-
-## How to Start Playing
-
-1. **Your Account**
-   - Your Telegram account is automatically used to create your game profile
-   - By default, we use your Telegram name as your display name
-   - You can change your display name anytime in profile settings for privacy
-
-
-2. **Understanding the Map**
-   
-   The game features three map layers, each showing different aspects of the game world:
-
-   ### Hex Layer
-   - Shows all capturable hexes
-   - Each hex is <span style="color: #2962FF">0.015</span> km² (about 15,000 m²)
-   - Different colors show ownership status
-   - This is where you capture and control territory
-
-   ### Clan Territory Layer
-   - Shows larger clan-controlled regions
-   - Each clan hex is <span style="color: #2962FF">0.737</span> km² (about 737,000 m²)
-   - Visualizes clan dominance in regions
-   - Perfect for clan strategy and territory wars
-
-   ### Global Activity Layer
-   - Provides worldwide territory overview
-   - Shows total captured territories globally
-   - Helps track worldwide game activity
-   - Great for understanding the game's global scale
-
-   Your current location is always shown on the active map layer.
-
-3. **Capturing Your First Hex**
-   - Move physically to a hex you want to capture
-   - Make sure you're within the hex boundaries
-   - Use the capture function in the game
-   - Wait for the capture process to complete
-
+> [!IMPORTANT]
+> Make sure your device's GPS is enabled and accurate.
 
 ## Game Interface
 
-The game has four main sections accessible from the bottom menu:
+### Main Menu
 
 1. **Profile**
-   - Shows your game points
-   - Displays overall statistics
-   - Access to user settings
-   - Customize your display name
+   - Stats
+   - Settings
+   - Update user profile 
 
 2. **Map**
-   - Main gameplay area
-   - Three map layers (Hex, Clan Territory, Global)
-   - Territory capture mechanics
-   - Real-time location tracking
+   - Main game board
+   - Territory overview
+   - Capture interface
+   - Location tracking
+
+> [!TIP]
+> Learn more about territory mechanics in our [Territory System](territory-system.md) guide.
 
 3. **Clan**
-   - Create or join a clan
-   - Manage clan activities
-   - View clan captured hexes
-   - Add Telegram chat link for clan communication
-   - Interact with clan members
+   - Create/manage clan
+   - View clan details
+   - Member info & stats
+
+> [!TIP]
+> See [Clan System](clan-system.md) for detailed information about clan features and benefits.
 
 4. **Leagues**
-   - Competitive rankings
-   - Player achievements
-   - Competition standings
+   - Rankings
+
+> [!NOTE]
+> Your league rank is based on your total settlement score, which increases with each hex capture. This score accumulates over time, even if you lose hexes later. Higher scores unlock better leagues!
+
+### Map View
+Three layers for different strategies:
+
+1. **Hex Layer** (Main gameplay)
+   - Individual hexes (0.015 km²)
+   - Ownership status
+   - Capture interface
+
+2. **Clan Territory** (Strategic view)
+   - Larger regions (0.737 km²)
+   - Clan dominance
+   - Territory wars
+
+3. **Global Activity**
+   - Worldwide overview
+   - Total territories
+   - Competition stats
+
+For detailed information about map layers and territory calculations, see [Territory System](territory-system.md#map-layers).
+
+## First Steps
+
+1. **Find Territory**
+   - Look for empty hexes
+   - Check ownership
+   - Plan expansion
+
+2. **Capture Hex**
+   - Walk to location
+   - Press "Settle"
+   - Wait for confirmation
+
+> [!TIP]
+> Start with hexes in places you visit regularly - it's easier to maintain control.
+
+For detailed capture mechanics and cooldown rules, check our [Game Mechanics](game-mechanics.md) guide.
 
