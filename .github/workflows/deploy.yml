@@ -10,6 +10,10 @@ permissions:
     pages: write
     id-token: write
 
+# Force-disable Jekyll
+env:
+    JEKYLL_ENV: "none"
+
 concurrency:
     group: "pages"
     cancel-in-progress: false
@@ -20,6 +24,12 @@ jobs:
         steps:
             - name: Checkout your repository using git
               uses: actions/checkout@v4
+
+            - name: Create .nojekyll file
+              run: |
+                  touch .nojekyll
+                  mkdir -p dist
+                  touch dist/.nojekyll
 
             - name: Setup PNPM
               uses: pnpm/action-setup@v2
@@ -38,16 +48,18 @@ jobs:
             - name: Build site
               run: pnpm build
 
-            - name: Create .nojekyll file
-              run: touch dist/.nojekyll
-
             - name: Setup Pages
               uses: actions/configure-pages@v4
+              with:
+                  enablement: true
+                  static_site_generator: true
 
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v2
               with:
                   path: dist
+                  # Explicitly disable Jekyll processing
+                  jekyll: false
 
     deploy:
         environment:
@@ -62,3 +74,5 @@ jobs:
               uses: actions/deploy-pages@v4
               with:
                   token: ${{ secrets.GITHUB_TOKEN }}
+                  # Explicitly disable Jekyll processing
+                  enable_jekyll: false
