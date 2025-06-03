@@ -37,6 +37,7 @@ export default defineConfig({
         plugins: [rawFonts([".ttf"])],
         optimizeDeps: {
             exclude: ["@resvg/resvg-js"],
+            
         },
     },
 });
