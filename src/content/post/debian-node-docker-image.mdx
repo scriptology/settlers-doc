@@ -14,16 +14,6 @@ I wasted a lot of time using Alpine + Node to get smaller images and then needin
 FROM node:bookworm-slim AS base
 WORKDIR /site
 
-# Install latest security upgrades, and crucial runtimes.
-RUN apt-get update \
-    && apt-get upgrade -y \
-    && apt-get install -y \
-        curl \
-    && rm -rf /var/lib/apt/lists/* \
-    && npm --global install npm pm2 npx prisma \
-    && rm -rf /opt/yarn* \
-    && rm -rf /root/.npm \
-    && rm -rf /tmp/*
 
 #########################
 # Builder image
@@ -31,24 +21,6 @@ RUN apt-get update \
 FROM base AS build
 WORKDIR /site
 
-# Install latest security upgrades, and crucial runtimes.
-RUN apt-get update \
-    && apt-get upgrade -y \
-    && apt-get install -y \
-        awscli \
-        build-essential \
-        ca-certificates \
-        gettext \
-        git \
-        gnupg \
-        jq \
-        python3 \
-        sudo \
-    && cp /usr/bin/envsubst /usr/local/bin/envsubst \
-    && rm -rf /var/lib/apt/lists/* \
-    && rm -rf /opt/yarn* \
-    && rm -rf /root/.npm \
-    && rm -rf /tmp/*
 
 # Install Docker
 RUN sudo install -m 0755 -d /etc/apt/keyrings \
